@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FO dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="bg-success text-white py-2">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-5">
+            <!-- Navigation Bar -->
+            <nav class="navbar navbar-expand-md navbar-dark">
+              <div class="container">
+                <a class="navbar-brand" href="../index.html">
+                  <img src="../images/icon.jpg" alt="icon" />
+                <span class="navbar-brand-text ml-2">Ufarm</span>
+                </a>
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#navbarNav"
+                  aria-controls="navbarNav"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                    <h2> <a class="nav-link text-white" href="#">FarmerOne</a></h2> 
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+          <div class="col-md-4 d-flex justify-content-center align-items-center">
+            <form action="/search" method="get" class="form-inline">
+              <div class="input-group">
+                <input class="form-control mr-sm-2" type="search" name="q" placeholder="Search" aria-label="Search" autocomplete="off" />
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary search-icon" type="submit"><i class="fas fa-search fa-lg"></i></button>
+                </div>
+              </div>
+            </form>
+          </div>
+                    
+          <div class="col-md-3 d-flex justify-content-end align-items-center">
+            <!-- Notification -->
+            <ul class="nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Welcome, FO</a> 
+               </li>
+            <!-- Account -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-user"></i>Account
+              </a>
+              <div class="dropdown-menu dropdown-menu-wider dropdown-menu-right" aria-labelledby="accountDropdown">
+                <form class="px-3 py-2">
+                  <div class="form-group">
+                    <label for="userType">User Type</label>
+                    <select class="form-control" id="userType">
+                      <option value="customer">Customer</option>
+                      <option value="urbanFarmer">Urban Farmer</option>
+                      <option value="farmerOne">Farmer One</option>
+                      <option value="agriculturalOfficer">Agricultural Officer</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="userID">User ID</label>
+                    <input type="text" class="form-control" id="userID" placeholder="User ID">
+                  </div>
+                  <div class="form-group" id="passwordInput">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password">
+                  </div>
+                  <button type="submit" class="btn btn-success">Sign in</button>
+                </form>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item btn btn-outline-primary btn-block text-center" href="../Login/login.html">Sign up</a>
+              </div>
+            </li>
+
+
+          </ul>
+    </div>
+</div>
+</div>
+</header>
+<!-- End of header section -->
+<!--main page-->
+<section id="main">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Left Column -->
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-header bg-success text-white">
+              <h4><i class="fas fa-cog"></i> Actions</h4>
+            </div>
+            <div class="card-body">
+              <ul class="list-group">
+                <li class="list-group-item active"><a href="#" class="text-dark">View Registered Farmers</a></li>
+                <li class="list-group-item"><a href="FO_add_farmer.html" class="text-dark">Register Farmer</a></li>
+                <li class="list-group-item "><a href="FO_view_booking.html" class="text-dark">View Orders and Bookings</a></li>
+                <li class="list-group-item"><a href="FO_inspect_produce.html" class="text-dark">Inspect Produce</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+                <!-- Right Column -->
+                <div class="col-md-9">
+                    <div class="card">
+                      <div class="card-header bg-success text-white">
+                        <h4><i class="fas fa-users"></i> Registered Farmers</h4>
+                      </div>
+                      <div class="card-body">
+                        <table class="table table-striped">
+                          <thead class="thead-dark">
+                            <tr>
+                              <th>Name</th>
+                              <th>Ward</th>
+                              <th>Activities</th>
+                              <th>Phone Number</th>
+                              <th>Action</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Ojara Ceaser</td>
+                              <td>Masajja 1</td>
+                              <td>Poultry, Horticulture</td>
+                              <td>0782-123-456</td>
+                              <td>
+                                <a href="#" class="btn btn-success btn-sm"><i class="fas fa-edit"></i> Edit</a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Otim Kenneth</td>
+                              <td>Masajja 2</td>
+                              <td>Poultry, Horticulture</td>
+                              <td>0782-123-456</td>
+                              <td>
+                                <a href="#" class="btn btn-success btn-sm"><i class="fas fa-edit"></i> Edit</a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+          
+                    <br>
+                    <hr>
+                    <br>
+          
+                    <div class="card">
+                      <div class="card-header bg-success text-white">
+                        <h4><i class="fas fa-tasks"></i> Inspection Tasks</h4>
+                      </div>
+                      <div class="card-body">
+                        <table class="table table-striped">
+                          <thead class="thead-dark">
+                            <tr>
+                              <th>Farmer Name</th>
+                              <th>Ward</th>
+                              <th>Task</th>
+                              <th>Date</th>
+                              <th>Action</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Ojara Ceaser</td>
+                              <td>Masajja 1</td>
+                              <td>Inspect chicken coop</td>
+                              <td>Mar 20, 2023</td>
+                              <td>
+                                <a href="#" class="btn btn-success btn-sm"><i class="fas fa-check"></i> Approve</a>
+                                <a href="#" class="btn btn-danger btn-sm"><i class="fas fa-times"></i> Reject</a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Otim Kenneth</td>
+                              <td>Masajja 2</td>
+                              <td>Inspect vegetable garden</td>
+                              <td>Apr 5, 2023</td>
+                              <td>
+                                <a href="#" class="btn btn-success btn-sm"><i class="fas fa-check"></i> Approve</a>
+                                <a href="#" class="btn btn-danger btn-sm"><i class="fas fa-times"></i> Reject</a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+          
+                    <br>
+                    <hr>
+                    <br>
+          
+                    <div class="card">
+                      <div class="card-header bg-success text-white">
+                        <h4><i class="fas fa-shopping-cart"></i> Orders</h4>
+                      </div>
+                      <div class="card-body">
+                        <table class="table table-striped">
+                            <thead class="thead-dark">
+                            <tr>
+                            <th>Order ID</th>
+                            <th>Customer Name</th>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Status</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                            <td>ORD-001</td>
+                            <td>John Doe</td>
+                            <td>Tomatoes</td>
+                            <td>20 kg</td>
+                            <td>UGX 100,000</td>
+                            <td>
+                            <span class="badge badge-warning">Pending</span>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td>ORD-002</td>
+                            <td>Jane Doe</td>
+                            <td>Cabbage</td>
+                            <td>30 kg</td>
+                            <td>UGX 90,000</td>
+                            <td>
+                            <span class="badge badge-success">Approved</span>
+                            </td>
+                            </tr>
+                            </tbody>
+                            </table>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            
+                              </section>
+          
+
+
+
+<!--end of main page-->
+
+
+<!--popper-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<!-- jQuery -->
+<script src="../js/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="../js/bootstrap.min.js"></script>
+<!--custom search script-->
+<script src="../js/index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agricultural Officer Dashboard - Appoint FarmerOne</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="bg-success text-white py-2">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <h1><i class="fas fa-leaf"></i> Agricultural Officer Dashboard</h1>
+        </div>
+        <div class="col-md-6">
+          <h5 class="float-right mt-3">Welcome, AO</h5>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Main Section -->
+  <section id="main">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Left Column -->
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-header bg-success text-white">
+              <h4><i class="fas fa-cog"></i> Actions</h4>
+            </div>
+            <div class="card-body">
+              <ul class="list-group">
+                <li class="list-group-item"><a href="AO_dashboard.html" class="text-dark">View Registered FarmerOnes (FO)</a></li>
+                <li class="list-group-item"><a href="AO_register_farmer.html" class="text-dark">Register FarmerOne</a></li>
+                <li class="list-group-item active"><a href="#" class="text-white">Appoint FO</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="col-md-9">
+          <div class="card">
+            <div class="card-header bg-success text-white">
+              <h4><i class="fas fa-user"></i> Appoint FarmerOne</h4>
+            </div>
+            <div class="card-body">
+              <form action="#" method="POST">
+                <div class="form-group">
+                  <label for="fo-name">FarmerOne Name</label>
+                  <input type="text" class="form-control" id="fo-name" name="fo-name" placeholder="Enter the field officer name">
+                </div>
+                <div class="form-group">
+                  <label for="region">Region</label>
+                  <input type="text" class="form-control" id="region" name="region" placeholder="Enter the region">
+                </div>
+                <div class="form-group">
+                  <label for="phone-number">Phone Number</label>
+                  <input type="text" class="form-control" id="phone-number" name="phone-number" placeholder="Enter the phone number">
+                </div>
+                <button type="submit" class="btn btn-success"><i class="fas fa-user-plus"></i> Appoint FO</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End of Main Content -->
+
+  <!-- Bootstrapcore JavaScript-->
+
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+</body>
+</html>
+

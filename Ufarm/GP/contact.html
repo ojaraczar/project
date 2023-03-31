@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="bg-success text-white py-2">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-5">
+            <!-- Navigation Bar -->
+            <nav class="navbar navbar-expand-md navbar-dark">
+              <div class="container">
+                <a class="navbar-brand" href="../index.html">
+                  <img src="../images/icon.jpg" alt="icon" />
+                  <span class="navbar-brand-text ml-2">Ufarm</span>
+                </a>
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#navbarNav"
+                  aria-controls="navbarNav"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav mr-auto">
+                    
+                    <li class="nav-item active">
+                      <a class="nav-link" href="public.html">Product</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+          <div class="col-md-4 d-flex justify-content-center align-items-center">
+            <form action="/search" method="get" class="form-inline">
+              <div class="input-group">
+                <input class="form-control mr-sm-2" type="search" name="q" placeholder="Search" aria-label="Search" autocomplete="off" />
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary search-icon" type="submit"><i class="fas fa-search fa-lg"></i></button>
+                </div>
+              </div>
+            </form>
+          </div>
+                    
+          <div class="col-md-3 d-flex justify-content-end align-items-center">
+            <!-- Notification -->
+            <ul class="nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="notificationDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-bell fa-lg"></i>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="notificationDropdown">
+                    <a class="dropdown-item" href="#">Notification 1</a>
+                    <a class="dropdown-item" href="#">Notification 2</a>
+                    <a class="dropdown-item" href="#">Notification 3</a>
+                </div>
+            </li>
+            <!-- Account -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-user"></i>Account
+              </a>
+              <div class="dropdown-menu dropdown-menu-wider dropdown-menu-right" aria-labelledby="accountDropdown">
+                <form class="px-3 py-2">
+                  <div class="form-group">
+                    <label for="userType">User Type</label>
+                    <select class="form-control" id="userType">
+                      <option value="customer">Customer</option>
+                      <option value="urbanFarmer">Urban Farmer</option>
+                      <option value="farmerOne">Farmer One</option>
+                      <option value="agriculturalOfficer">Agricultural Officer</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="userID">User ID</label>
+                    <input type="text" class="form-control" id="userID" placeholder="User ID">
+                  </div>
+                  <div class="form-group" id="passwordInput">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password">
+                  </div>
+                  <button type="submit" class="btn btn-success">Sign in</button>
+                </form>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item btn btn-outline-primary btn-block text-center" href="../Login/login.html">Sign up</a>
+              </div>
+            </li>
+
+            <!-- Cart -->
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-shopping-cart"></i>Cart
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+</header>
+<!-- End of header section -->
+<!--Main Page-->
+<main class="container-fluid my-5">
+    <section class="container my-5">
+        <h1 class="text-center">Contact Us</h1>
+        <hr>
+        <div class="row my-5">
+          <div class="col-md-6 border rounded p-3">
+            <h3>Get in Touch</h3>
+            <p>If you have any questions, comments or feedback about the Ufarm program, please feel free to contact us using the form below.</p>
+            <!-- Contact Form -->
+            <form id="contactForm" method="POST" action="/send-email">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" name="name" required autocomplete="off">
+              </div>
+      
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" required autocomplete="off">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              </div>
+      
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="5" required autocomplete="off"></textarea>
+              </div>
+      
+              <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+          </div>
+      
+          <div class="col-md-6 border rounded p-3">
+            <h3>Contact Information</h3>
+      
+            <!-- Email Address -->
+            <p><i class="fas fa-envelope text-success"></i> Email: <a class="text-primary" href="mailto:admin@ufarm.com">admin@ufarm.com</a></p>
+      
+            <!-- Phone Number -->
+            <p><i class="fas fa-phone text-success"></i> Phone: +256 123-456-789</p>
+      
+            <!-- Social Media Links -->
+            <h3>Follow Us</h3>
+            <ul class="list-unstyled">
+              <li><a class="text-primary" href="https://www.facebook.com/ufarm"><i class="fab fa-facebook fa-lg text-primary"></i> Facebook</a></li>
+              <li><a class="text-primary" href="https://www.twitter.com/ufarm"><i class="fab fa-twitter fa-lg text-primary"></i> Twitter</a></li>
+              <li><a class="text-primary" href="https://www.instagram.com/ufarm"><i class="fab fa-instagram fa-lg text-warning"></i> Instagram</a></li>
+              <li><a class="text-primary" href="https://www.linkedin.com/ufarm"><i class="fab fa-linkedin fa-lg text-primary"></i> LinkedIn</a></li>
+
+            </ul>
+      
+            <!-- FAQ Section -->
+            <h3>FAQs</h3>
+            <p>Check out our <a class="text-primary" href="#">FAQs</a> page for answers to some commonly asked questions.</p>
+          </div>
+        </div>
+      </section>
+
+
+<!--end of contact us page-->
+    <b></b>
+    <hr>
+    
+
+
+
+
+
+  
+  </main>
+   
+  <!-- Footer -->
+  <footer class="bg-success text-white py-2">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="text-center">&copy; 2023 | Masajja Division Urban Farming Initiative</p>
+        </div>
+        <div class="col-md-6">
+          <p class="text-center">Project by Ojara Ceaser</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  
+<!--end of main page-->
+
+
+<!--popper-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<!-- jQuery -->
+<script src="../js/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="../js/bootstrap.min.js"></script>
+<!--custom search script-->
+<script src="../js/index.js"></script>
+
+  </body>
+</html>

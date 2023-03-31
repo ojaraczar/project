@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register Farmer - Agricultural Officer Dashboard</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="bg-success text-white py-2">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <h1><i class="fas fa-leaf"></i> Agricultural Officer Dashboard</h1>
+        </div>
+        <div class="col-md-6">
+          <h5 class="float-right mt-3">Welcome, AO</h5>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Main Section -->
+  <section id="main">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Left Column -->
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-header bg-success text-white">
+              <h4><i class="fas fa-cog"></i> Actions</h4>
+            </div>
+            <div class="card-body">
+              <ul class="list-group">
+                <li class="list-group-item"><a href="AO_dashboard.html" class="text-dark">View Registered FarmerOnes (FO)</a></li>
+                <li class="list-group-item active"><a href="AO_register_farmer.html" class="text-dark">Register FarmerOne</a></li>
+                <li class="list-group-item"><a href="AO_appoint_FO.html" class="text-dark">Appoint FO</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    <!-- Right Column -->
+    <div class="col-md-9">
+        <div class="card">
+          <div class="card-header bg-success text-white">
+            <h4><i class="fas fa-user"></i> Register Farmer</h4>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="ward">Ward</label>
+                <input type="text" class="form-control" id="ward" name="ward" required>
+              </div>
+              <div class="form-group">
+                <label for="fo_number">Unique FO Number</label>
+                <input type="text" class="form-control" id="fo_number" name="fo_number" required>
+              </div>
+              <div class="form-group">
+                <label for="registration_date">Date of Registration</label>
+                <input type="date" class="form-control" id="registration_date" name="registration_date" required>
+              </div>
+              <div class="form-group">
+                <label for="gender">Gender</label>
+                <select class="form-control" id="gender" name="gender" required>
+                  <option value="">-- Select Gender --</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="activities">Activities involved in:</label>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="poultry" name="activities[]" value="poultry">
+                  <label class="form-check-label" for="poultry">Poultry</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="horticulture" name="activities[]" value="horticulture">
+                  <label class="form-check-label" for="horticulture">Horticulture</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="crop_farming" name="activities[]" value="crop_farming">
+                  <label class="form-check-label" for="crop_farming">Crop farming</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="livestock" name="activities[]" value="livestock">
+                  <label class="form-check-label" for="livestock">Livestock</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="nin">NIN Number:</label>
+                <input type="text" class="form-control" id="nin" name="nin" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="text" class="form-control" id="phone" name="phone" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="directions">Directions to Home:</label>
+                <textarea class="form-control" id="directions" name="directions" rows="3" required></textarea>
+              </div>
+              
+              <div class="form-group">
+                <label for="residence_type">Residence Type:</label>
+                <select class="form-control" id="residence_type" name="residence_type" required>
+                  <option value="">-- Select Residence Type --</option>
+                  <option value="rented">Rented</option>
+                  <option value="owned">Owned</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="period_stay">Period of Stay in Ward:</label>
+                <input type="text" class="form-control" id="period_stay" name="period_stay" required>
+              </div>
+              
+              <button type="submit" class="btn btn-success">Register</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Main Content -->
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+  </body>
+  </html>  
+  

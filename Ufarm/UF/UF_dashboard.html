@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urban Farmer Dashboard</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="bg-success text-white py-2">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <h1><i class="fas fa-leaf"></i> Urban Farmer</h1>
+        </div>
+        <div class="col-md-6">
+          <h5 class="float-right mt-3">Welcome, Urban Farmer</h5>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Main Section -->
+  <section id="main">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Left Column -->
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-header bg-success text-white">
+              <h4><i class="fas fa-cog"></i> Actions</h4>
+            </div>
+            <div class="card-body">
+              <ul class="list-group">
+                <li class="list-group-item"><a href="#" class="text-dark">Upload Produce</a></li>
+                <li class="list-group-item"><a href="#" class="text-dark">View Orders</a></li>
+                <li class="list-group-item"><a href="#" class="text-dark">Update Profile</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    <!-- Right Column -->
+    <div class="col-md-9">
+        <div class="card">
+          <div class="card-header bg-success text-white">
+            <h4><i class="fas fa-upload"></i> Upload Produce</h4>
+          </div>
+          <div class="card-body">
+            <form action="upload.php" method="post">
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="ward">Ward:</label>
+                <input type="text" class="form-control" id="ward" name="ward" required>
+              </div>
+              <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="date" class="form-control" id="date" name="date" required>
+              </div>
+              <div class="form-group">
+                <label for="unit_price">Unit Price:</label>
+                <input type="number" class="form-control" id="unit_price" name="unit_price" required>
+              </div>
+              <div class="form-group">
+                <label for="quantity">Quantity:</label>
+                <input type="number" class="form-control" id="quantity" name="quantity" required>
+              </div>
+              <div class="form-group">
+                <label for="payment">Mode of Payment:</label>
+                <select class="form-control" id="payment" name="payment">
+                    <option value="">--Select--</option>
+                    <option value="cash">Cash</option>
+                    <option value="mobile_money">Mobile Money</option>
+                    </select>
+                    </div>
+                    <div class="form-group">
+                    <label for="delivery">Mode of Delivery:</label>
+                    <select class="form-control" id="delivery" name="delivery">
+                    <option value="">--Select--</option>
+                    <option value="pick_up">Pick Up</option>
+                    <option value="home_delivery">Home Delivery</option>
+                    </select>
+                    </div>
+                    <div class="form-group">
+                    <label for="type">Produce Type:</label>
+                    <select class="form-control" id="type" name="type">
+                    <option value="">--Select--</option>
+                    <option value="organic">Organic</option>
+                    <option value="non_organic">Non-Organic</option>
+                    </select>
+                    </div>
+                    <div class="form-group">
+                    <label for="directions">Directions:</label>
+                    <textarea class="form-control" id="directions" name="directions" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success">Submit</button>
+                    </form>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    
+                      </section>
+                      <!-- End of Main Content -->
+                      <!-- Bootstrap core JavaScript-->
+                      <script src="vendor/jquery/jquery.min.js"></script>
+                      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+                      <!-- Core plugin JavaScript-->
+                      <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+                      <!-- Custom scripts for all pages-->
+                      <script src="js/sb-admin-2.min.js"></script>
+                    </body>
+                    </html>
+                    
+                    
+                    
+                    
+                    
+  

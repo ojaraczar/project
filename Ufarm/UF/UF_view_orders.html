@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Orders | Urban farmer</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="bg-success text-white py-2">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <h1><i class="fas fa-leaf"></i> Urban Farmer</h1>
+        </div>
+        <div class="col-md-6">
+          <h5 class="float-right mt-3">Welcome, Urban Farmer</h5>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Main Section -->
+  <section id="main">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Left Column -->
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-header bg-success text-white">
+              <h4><i class="fas fa-cog"></i> Actions</h4>
+            </div>
+            <div class="card-body">
+              <ul class="list-group">
+                <li class="list-group-item"><a href="UF_upload_produce.html" class="text-dark">Upload Produce</a></li>
+                <li class="list-group-item active"><a href="UF_view_orders.html" class="text-dark">View Orders</a></li>
+                <li class="list-group-item "><a href="UF_update_profile.html" class="text-dark">Update Profile</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+<div class="col-md-9">
+    <div class="card">
+      <div class="card-header bg-success text-white">
+        <h4><i class="fas fa-shopping-cart"></i> Orders</h4>
+      </div>
+      <div class="card-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Customer Name</th>
+              <th>Product Name</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1234</td>
+              <td>Ojara Ceaser</td>
+              <td>Potatoes</td>
+              <td>10</td>
+              <td>2000</td>
+              <td><span class="badge badge-primary">Pending</span></td>
+            </tr>
+            <tr>
+              <td>5678</td>
+              <td>Ojara Ceaser</td>
+              <td>Tomatoes</td>
+              <td>5</td>
+              <td>1500</td>
+              <td><span class="badge badge-success">Delivered</span></td>
+            </tr>
+            <tr>
+              <td>9012</td>
+              <td>Ojara Ceaser</td>
+              <td>Cabbage</td>
+              <td>3</td>
+              <td>500</td>
+              <td><span class="badge badge-warning">In Transit</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <br>
+        <hr>
+
+        <div class="row mt-3">
+          <div class="col-md-6">
+            <canvas id="orderChart"></canvas>
+          </div>
+          <div class="col-md-6">
+            <canvas id="revenueChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+                    </div>
+                    </div>
+                    
+                      </section>
+                      <!-- End Upload Produce Section -->
+                    <!-- jQuery -->
+                      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+                      <!-- Bootstrap JavaScript -->
+                      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+                      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                      <script>
+                        // Order Chart
+                        var orderChart = new Chart(document.getElementById("orderChart"), {
+                          type: 'pie',
+                          data: {
+                            labels: ["Pending", "In Transit", "Delivered"],
+                            datasets: [{
+                              label: "Orders",
+                              backgroundColor: ["#007bff", "#ffc107", "#28a745"],
+                              data: [1, 1, 1]
+                            }]
+                          },
+                          options: {
+                            title: {
+                              display: true,
+                              text: 'Order Volume'
+                            }
+                          }
+                        });
+                      
+                        // Revenue Chart
+                        var revenueChart = new Chart(document.getElementById("revenueChart"), {
+                          type: 'bar',
+                          data: {
+                            labels: ["January", "February", "March"],
+                            datasets: [{
+                              label: "Revenue",
+                              backgroundColor: "#28a745",
+                              data: [5000, 7500, 10000]
+                            }]
+                          },
+                          options: {
+                            title: {
+                              display: true,
+                              text: 'Monthly Revenue'
+                            },
+                            scales: {
+                              yAxes: [{type: 'linear',
+ticks: {
+beginAtZero: true,
+callback: function(value, index, values) {
+return '$' + value.toLocaleString();
+}
+},
+scaleLabel: {
+display: true,
+labelString: 'Total Cost'
+}
+}],
+xAxes: [{
+ticks: {
+beginAtZero: true,
+callback: function(value, index, values) {
+return new Date(value).toLocaleDateString();
+}
+},
+type: 'time',
+distribution: 'series',
+time: {
+unit: 'day'
+}
+}]
+},
+legend: {
+display: false
+}
+}
+});
+</script>
+                               
+      </body>
+     </html>
+                    
+                    
+                    

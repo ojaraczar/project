@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="bg-success text-white py-2">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-5">
+            <!-- Navigation Bar -->
+            <nav class="navbar navbar-expand-md navbar-dark">
+              <div class="container">
+                <a class="navbar-brand" href="../index.html">
+                  <img src="../images/icon.jpg" alt="icon" />
+                  <span class="navbar-brand-text ml-2">Ufarm</span>
+                </a>
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#navbarNav"
+                  aria-controls="navbarNav"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav mr-auto">
+                    
+                    <li class="nav-item active">
+                      <a class="nav-link" href="public.html">Product</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+          <div class="col-md-4 d-flex justify-content-center align-items-center">
+            <form action="/search" method="get" class="form-inline">
+              <div class="input-group">
+                <input class="form-control mr-sm-2" type="search" name="q" placeholder="Search" aria-label="Search" autocomplete="off" />
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary search-icon" type="submit"><i class="fas fa-search fa-lg"></i></button>
+                </div>
+              </div>
+            </form>
+          </div>
+                    
+          <div class="col-md-3 d-flex justify-content-end align-items-center">
+            <!-- Notification -->
+            <ul class="nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="notificationDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-bell fa-lg"></i>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="notificationDropdown">
+                    <a class="dropdown-item" href="#">Notification 1</a>
+                    <a class="dropdown-item" href="#">Notification 2</a>
+                    <a class="dropdown-item" href="#">Notification 3</a>
+                </div>
+            </li>
+            <!-- Account -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-user"></i>Account
+              </a>
+              <div class="dropdown-menu dropdown-menu-wider dropdown-menu-right" aria-labelledby="accountDropdown">
+                <form class="px-3 py-2">
+                  <div class="form-group">
+                    <label for="userType">User Type</label>
+                    <select class="form-control" id="userType">
+                      <option value="customer">Customer</option>
+                      <option value="urbanFarmer">Urban Farmer</option>
+                      <option value="farmerOne">Farmer One</option>
+                      <option value="agriculturalOfficer">Agricultural Officer</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="userID">User ID</label>
+                    <input type="text" class="form-control" id="userID" placeholder="User ID" autocomplete="off">
+                  </div>
+                  <div class="form-group" id="passwordInput">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password" autocomplete="off">
+                  </div>
+                  <button type="submit" class="btn btn-success">Sign in</button>
+                </form>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item btn btn-outline-primary btn-block text-center" href="../Login/login.html">Sign up</a>
+              </div>
+            </li>
+
+            <!-- Cart -->
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-shopping-cart"></i>Cart
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+</header>
+<!-- End of header section -->
+<!--Main Page-->
+<main class="container-fluid my-5">
+ 
+<div class="row">
+  <div class="hero-image">
+    <img src="../images/hero2.jpg" alt="Hero Image" class="img-fluid">
+    <div class="hero-text col-md-6 offset-md-3 col-sm-12 mt-4 mx-auto" style="max-width: 600px; text-align: center;">
+      <h2 class="mb-4 text-white">About Us</h2>
+      <p class="text-white">At Ufarm, we are passionate about helping farmers succeed. Our platform connects farmers with the resources they need to grow and sell their produce to reliable buyers. Our mission is to create a more sustainable agricultural system, one that benefits both farmers and consumers.</p>
+      <div id="more" style="display: none;">
+        <p class="text-white">We believe that technology can play a key role in achieving this mission. We are building a platform that empowers farmers to make better decisions and streamline their operations. We are committed to driving innovation in the agricultural sector and supporting the growth of rural communities.</p>
+      </div>
+      <button onclick="document.getElementById('more').style.display='block'; this.style.display='none'" class="btn btn-success">Read More</button>
+    </div>
+  </div>
+</div>
+
+
+    <div class="row mt-5" id="Vision">
+      <div class="col-md-4">
+        <div class="card card-height2">
+          <div class="card-body">
+            <i class="fas fa-eye fa-3x mb-3 text-success"></i>
+            <h3 class="card-title">Our Vision</h3>
+            <p class="card-text">To be the leading technology platform for sustainable agriculture, connecting farmers with the resources they need to thrive.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" id="mission">
+        <div class="card card-height2">
+          <div class="card-body">
+            <i class="fas fa-bullseye fa-3x mb-3 text-success"></i>
+            <h3 class="card-title">Our Mission</h3>
+            <p class="card-text">To empower farmers with the tools, knowledge, and resources they need to increase productivity, profitability, and sustainability.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" id="Objectives">
+        <div class="card card-height2">
+          <div class="card-body">
+            <i class="fas fa-flag fa-3x mb-3 text-success"></i>
+            <h3 class="card-title">Our Objectives</h3>
+            <ul class="card-text">
+              <li>Support smallholder farmers in Massajja Division</li>
+              <li>Facilitate access to financing and insurance</li>
+              <li>Reduce post-harvest losses and food waste</li>
+              <li>Promote sustainable farming practices</li>
+              <li>Create value for all stakeholders</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <b></b>
+    <hr>
+    <!-- Call to Action -->
+    <section class="bg-success text-white py-5">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-8">
+              <h2>Want to learn more about our products?</h2>
+              <p>Sign up for our newsletter and be the first to know about new products, special deals, and exclusive offers.</p>
+            </div>
+            <div class="col-md-4 d-flex align-items-center">
+              <form action="#">
+                <div class="form-group mb-0">
+                  <label for="email" class="sr-only">Email Address</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter your email address" autocomplete="off">
+                </div>
+                <button type="submit" class="btn btn-lg btn-dark">Sign Up</button>
+              </form>
+            </div>
+          </div>
+        </div>
+  
+  </main>
+      
+  
+<!--end of main page-->
+
+
+<!--popper-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<!-- jQuery -->
+<script src="../js/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="../js/bootstrap.min.js"></script>
+<!--custom search script-->
+<script src="../js/index.js"></script>
+
+  </body>
+</html>
